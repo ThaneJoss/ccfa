@@ -58,7 +58,7 @@ python3 scripts/build.py
 
 `dist/` 输出 `.xpi`、`updates.json` 和 `SHA256SUMS.txt`。XPI 使用固定时间戳，可重复构建。字典维护入口为 `data/catalog.json`。
 
-自动化验证包含完整字典、名称变体、非 A 类和 Workshop 排除、只读元数据行为、插件启用/禁用及启动中取消。已核对 Zotero 官方列接口；发布环境未运行真实 Zotero 桌面实例，界面安装与排序仍需在实际客户端确认。
+自动化验证包含完整字典、名称变体、非 A 类和 Workshop 排除、只读元数据行为、插件启用/禁用及启动中取消。1.0.1 起，发布流程还会在独立的真实 Zotero 10.0.6 Linux 测试配置中检查安装、列注册、真实条目读取、禁用/启用和重启恢复；结果随 Release 的 `zotero-smoke.json` 提供。Windows/macOS 未实机验证。
 
 ## 发布
 

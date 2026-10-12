@@ -64,6 +64,12 @@ async function runProbe() {
       await install.install();
     }
     const addon = await AddonManager.getAddonByID(config.addonID);
+    results.addon = addon ? {
+      id: addon.id, version: addon.version, isActive: addon.isActive,
+      isCompatible: addon.isCompatible, appDisabled: addon.appDisabled,
+      userDisabled: addon.userDisabled, softDisabled: addon.softDisabled,
+      pendingOperations: addon.pendingOperations
+    } : null;
     check(addon && addon.version === config.version && addon.isActive, 'Installed version is active');
     let column = await columnExists(true);
     check(column.label === 'CCFA', 'Real item-tree column is named CCFA');
@@ -89,6 +95,8 @@ async function runProbe() {
       await columnExists(true);
       check(true, 'Re-enabling registers CCFA');
     }
+    // Let the addon manager complete its deferred metadata writes before shutdown.
+    await new Promise(resolve => setTimeout(resolve, 1000));
     results.ok = true;
   } catch (error) {
     results.ok = false;
@@ -168,7 +176,8 @@ with tempfile.TemporaryDirectory(prefix="ccfa-zotero-smoke-") as temporary:
                 report = json.loads(result.read_text())
                 print(json.dumps(report, indent=2), flush=True)
                 if not report.get("ok"):
-                    raise RuntimeError("Zotero test failed:\n" + log.read_text(errors="replace")[-18000:])
+                    log_text = log.read_text(errors="replace")
+                    raise RuntimeError("Zotero test failed:\n" + log_text[:10000] + "\n...\n" + log_text[-10000:])
                 reports.append(report)
             finally:
                 if process.poll() is None:

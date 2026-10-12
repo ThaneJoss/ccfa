@@ -3,7 +3,7 @@ name: Test, build and release CCFA
 on:
   push:
     branches: [main]
-    paths: [manifest.json]
+    paths: [manifest.json, scripts/smoke-zotero.py, .github/workflows/release.yml]
   workflow_dispatch:
 
 permissions:
