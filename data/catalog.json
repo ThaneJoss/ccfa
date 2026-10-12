@@ -1,0 +1,1351 @@
+{
+  "edition": "CCF 2026 第七版正式目录",
+  "checkedOn": "2026-10-12",
+  "officialURL": "https://www.ccf.org.cn/Academic_Evaluation/By_category/",
+  "sourcePDF": "https://kyc.lsu.edu.cn/_upload/article/files/20/77/2cbaa3754eb9aff9ed74cafed8ff/23a8de02-594c-445f-b084-69b0193c05b3.pdf",
+  "sourceSHA256": "271b630b576bf8a4f802e767f5694caded93680e22b3a19bef7902591c45c1d3",
+  "notes": [
+    "All 95 A-class rows were checked against the CCF-authored PDF.",
+    "Journal of Cryptology has no official abbreviation in the source; J. Cryptol. is a display abbreviation.",
+    "Classification uses the 2026 directory for all publication years; it is not a paper-type or historical-rank certification."
+  ],
+  "venues": [
+    {
+      "abbr": "TOCS",
+      "name": "ACM Transactions on Computer Systems",
+      "type": "journal",
+      "category": "计算机体系结构/并行与分布计算/存储系统",
+      "sourcePage": 2,
+      "officialAbbr": "TOCS",
+      "aliases": [
+        "ACM Trans. Comput. Syst."
+      ],
+      "acronyms": [
+        "TOCS"
+      ]
+    },
+    {
+      "abbr": "TOS",
+      "name": "ACM Transactions on Storage",
+      "type": "journal",
+      "category": "计算机体系结构/并行与分布计算/存储系统",
+      "sourcePage": 2,
+      "officialAbbr": "TOS",
+      "aliases": [
+        "ACM Trans. Storage"
+      ],
+      "acronyms": [
+        "TOS",
+        "ACM Trans. Storage"
+      ]
+    },
+    {
+      "abbr": "TCAD",
+      "name": "IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems",
+      "type": "journal",
+      "category": "计算机体系结构/并行与分布计算/存储系统",
+      "sourcePage": 2,
+      "officialAbbr": "TCAD",
+      "aliases": [
+        "IEEE Trans. Comput.-Aided Des. Integr. Circuits Syst."
+      ],
+      "acronyms": [
+        "TCAD"
+      ]
+    },
+    {
+      "abbr": "TC",
+      "name": "IEEE Transactions on Computers",
+      "type": "journal",
+      "category": "计算机体系结构/并行与分布计算/存储系统",
+      "sourcePage": 2,
+      "officialAbbr": "TC",
+      "aliases": [
+        "IEEE Trans. Comput."
+      ],
+      "acronyms": [
+        "TC",
+        "IEEE Trans. Comput."
+      ]
+    },
+    {
+      "abbr": "TPDS",
+      "name": "IEEE Transactions on Parallel and Distributed Systems",
+      "type": "journal",
+      "category": "计算机体系结构/并行与分布计算/存储系统",
+      "sourcePage": 2,
+      "officialAbbr": "TPDS",
+      "aliases": [
+        "IEEE Trans. Parallel Distrib. Syst."
+      ],
+      "acronyms": [
+        "TPDS"
+      ]
+    },
+    {
+      "abbr": "TACO",
+      "name": "ACM Transactions on Architecture and Code Optimization",
+      "type": "journal",
+      "category": "计算机体系结构/并行与分布计算/存储系统",
+      "sourcePage": 2,
+      "officialAbbr": "TACO",
+      "aliases": [
+        "ACM Trans. Archit. Code Optim."
+      ],
+      "acronyms": [
+        "TACO"
+      ]
+    },
+    {
+      "abbr": "PPoPP",
+      "name": "ACM SIGPLAN Symposium on Principles & Practice of Parallel Programming",
+      "type": "conference",
+      "category": "计算机体系结构/并行与分布计算/存储系统",
+      "sourcePage": 5,
+      "officialAbbr": "PPoPP",
+      "aliases": [
+        "Principles and Practice of Parallel Programming"
+      ],
+      "acronyms": [
+        "PPoPP"
+      ]
+    },
+    {
+      "abbr": "FAST",
+      "name": "USENIX Conference on File and Storage Technologies",
+      "type": "conference",
+      "category": "计算机体系结构/并行与分布计算/存储系统",
+      "sourcePage": 5,
+      "officialAbbr": "FAST",
+      "aliases": [],
+      "acronyms": [
+        "FAST"
+      ]
+    },
+    {
+      "abbr": "DAC",
+      "name": "Design Automation Conference",
+      "type": "conference",
+      "category": "计算机体系结构/并行与分布计算/存储系统",
+      "sourcePage": 5,
+      "officialAbbr": "DAC",
+      "aliases": [],
+      "acronyms": [
+        "DAC"
+      ]
+    },
+    {
+      "abbr": "HPCA",
+      "name": "IEEE International Symposium on High Performance Computer Architecture",
+      "type": "conference",
+      "category": "计算机体系结构/并行与分布计算/存储系统",
+      "sourcePage": 5,
+      "officialAbbr": "HPCA",
+      "aliases": [],
+      "acronyms": [
+        "HPCA"
+      ]
+    },
+    {
+      "abbr": "MICRO",
+      "name": "IEEE/ACM International Symposium on Microarchitecture",
+      "type": "conference",
+      "category": "计算机体系结构/并行与分布计算/存储系统",
+      "sourcePage": 5,
+      "officialAbbr": "MICRO",
+      "aliases": [],
+      "acronyms": [
+        "MICRO"
+      ]
+    },
+    {
+      "abbr": "SC",
+      "name": "International Conference for High Performance Computing, Networking, Storage, and Analysis",
+      "type": "conference",
+      "category": "计算机体系结构/并行与分布计算/存储系统",
+      "sourcePage": 5,
+      "officialAbbr": "SC",
+      "aliases": [
+        "International Conference on High Performance Computing Networking Storage and Analysis"
+      ],
+      "acronyms": [
+        "SC"
+      ]
+    },
+    {
+      "abbr": "ASPLOS",
+      "name": "International Conference on Architectural Support for Programming Languages and Operating Systems",
+      "type": "conference",
+      "category": "计算机体系结构/并行与分布计算/存储系统",
+      "sourcePage": 5,
+      "officialAbbr": "ASPLOS",
+      "aliases": [],
+      "acronyms": [
+        "ASPLOS"
+      ]
+    },
+    {
+      "abbr": "ISCA",
+      "name": "International Symposium on Computer Architecture",
+      "type": "conference",
+      "category": "计算机体系结构/并行与分布计算/存储系统",
+      "sourcePage": 5,
+      "officialAbbr": "ISCA",
+      "aliases": [],
+      "acronyms": [
+        "ISCA"
+      ]
+    },
+    {
+      "abbr": "ACM SIGOPS ATC",
+      "name": "ACM SIGOPS Annual Technical Conference",
+      "type": "conference",
+      "category": "计算机体系结构/并行与分布计算/存储系统",
+      "sourcePage": 5,
+      "officialAbbr": "ACM SIGOPS ATC（原 USENIX ATC）",
+      "aliases": [
+        "ACM SIGOPS ATC（原 USENIX ATC）",
+        "USENIX ATC",
+        "USENIX Annual Technical Conference",
+        "ATC"
+      ],
+      "acronyms": [
+        "ACM SIGOPS ATC",
+        "USENIX ATC",
+        "ATC"
+      ]
+    },
+    {
+      "abbr": "EuroSys",
+      "name": "European Conference on Computer Systems",
+      "type": "conference",
+      "category": "计算机体系结构/并行与分布计算/存储系统",
+      "sourcePage": 5,
+      "officialAbbr": "EuroSys",
+      "aliases": [],
+      "acronyms": [
+        "EuroSys"
+      ]
+    },
+    {
+      "abbr": "HPDC",
+      "name": "The International ACM Symposium on High-Performance Parallel and Distributed Computing",
+      "type": "conference",
+      "category": "计算机体系结构/并行与分布计算/存储系统",
+      "sourcePage": 5,
+      "officialAbbr": "HPDC",
+      "aliases": [
+        "International Symposium on High Performance Distributed Computing",
+        "High Performance Parallel and Distributed Computing"
+      ],
+      "acronyms": [
+        "HPDC"
+      ]
+    },
+    {
+      "abbr": "JSAC",
+      "name": "IEEE Journal on Selected Areas in Communications",
+      "type": "journal",
+      "category": "计算机网络",
+      "sourcePage": 10,
+      "officialAbbr": "JSAC",
+      "aliases": [
+        "IEEE J. Sel. Areas Commun."
+      ],
+      "acronyms": [
+        "JSAC"
+      ]
+    },
+    {
+      "abbr": "TMC",
+      "name": "IEEE Transactions on Mobile Computing",
+      "type": "journal",
+      "category": "计算机网络",
+      "sourcePage": 10,
+      "officialAbbr": "TMC",
+      "aliases": [
+        "IEEE Trans. Mob. Comput."
+      ],
+      "acronyms": [
+        "TMC"
+      ]
+    },
+    {
+      "abbr": "TON",
+      "name": "IEEE Transactions on Networking",
+      "type": "journal",
+      "category": "计算机网络",
+      "sourcePage": 10,
+      "officialAbbr": "TON",
+      "aliases": [
+        "IEEE Transactions on Networking（原 IEEE/ACM Transactions on Networking）",
+        "IEEE/ACM Transactions on Networking",
+        "IEEE/ACM Trans. Netw.",
+        "IEEE Trans. Netw."
+      ],
+      "acronyms": [
+        "TON",
+        "IEEE Trans. Netw."
+      ]
+    },
+    {
+      "abbr": "SIGCOMM",
+      "name": "ACM International Conference on Applications, Technologies, Architectures, and Protocols for Computer Communication",
+      "type": "conference",
+      "category": "计算机网络",
+      "sourcePage": 13,
+      "officialAbbr": "SIGCOMM",
+      "aliases": [
+        "ACM SIGCOMM Conference"
+      ],
+      "acronyms": [
+        "SIGCOMM"
+      ]
+    },
+    {
+      "abbr": "MobiCom",
+      "name": "ACM International Conference on Mobile Computing and Networking",
+      "type": "conference",
+      "category": "计算机网络",
+      "sourcePage": 13,
+      "officialAbbr": "MobiCom",
+      "aliases": [],
+      "acronyms": [
+        "MobiCom"
+      ]
+    },
+    {
+      "abbr": "INFOCOM",
+      "name": "IEEE International Conference on Computer Communications",
+      "type": "conference",
+      "category": "计算机网络",
+      "sourcePage": 13,
+      "officialAbbr": "INFOCOM",
+      "aliases": [],
+      "acronyms": [
+        "INFOCOM"
+      ]
+    },
+    {
+      "abbr": "NSDI",
+      "name": "Symposium on Network System Design and Implementation",
+      "type": "conference",
+      "category": "计算机网络",
+      "sourcePage": 13,
+      "officialAbbr": "NSDI",
+      "aliases": [
+        "USENIX Symposium on Networked Systems Design and Implementation",
+        "Symposium on Networked Systems Design and Implementation"
+      ],
+      "acronyms": [
+        "NSDI"
+      ]
+    },
+    {
+      "abbr": "TDSC",
+      "name": "IEEE Transactions on Dependable and Secure Computing",
+      "type": "journal",
+      "category": "网络与信息安全",
+      "sourcePage": 17,
+      "officialAbbr": "TDSC",
+      "aliases": [
+        "IEEE Trans. Dependable Secure Comput."
+      ],
+      "acronyms": [
+        "TDSC"
+      ]
+    },
+    {
+      "abbr": "TIFS",
+      "name": "IEEE Transactions on Information Forensics and Security",
+      "type": "journal",
+      "category": "网络与信息安全",
+      "sourcePage": 17,
+      "officialAbbr": "TIFS",
+      "aliases": [
+        "IEEE Trans. Inf. Forensics Secur."
+      ],
+      "acronyms": [
+        "TIFS"
+      ]
+    },
+    {
+      "abbr": "J. Cryptol.",
+      "name": "Journal of Cryptology",
+      "type": "journal",
+      "category": "网络与信息安全",
+      "sourcePage": 17,
+      "officialAbbr": "",
+      "aliases": [
+        "J. Cryptology",
+        "JOC"
+      ],
+      "acronyms": [
+        "J. Cryptol.",
+        "J. Cryptology",
+        "JOC"
+      ]
+    },
+    {
+      "abbr": "CCS",
+      "name": "ACM Conference on Computer and Communications Security",
+      "type": "conference",
+      "category": "网络与信息安全",
+      "sourcePage": 20,
+      "officialAbbr": "CCS",
+      "aliases": [],
+      "acronyms": [
+        "CCS"
+      ]
+    },
+    {
+      "abbr": "EUROCRYPT",
+      "name": "International Conference on the Theory and Applications of Cryptographic Techniques",
+      "type": "conference",
+      "category": "网络与信息安全",
+      "sourcePage": 20,
+      "officialAbbr": "EUROCRYPT",
+      "aliases": [],
+      "acronyms": [
+        "EUROCRYPT"
+      ]
+    },
+    {
+      "abbr": "S&P",
+      "name": "IEEE Symposium on Security and Privacy",
+      "type": "conference",
+      "category": "网络与信息安全",
+      "sourcePage": 20,
+      "officialAbbr": "S&P",
+      "aliases": [
+        "IEEE S&P",
+        "IEEE SP",
+        "IEEE Symposium on Security and Privacy SP",
+        "IEEE Security and Privacy Symposium",
+        "Oakland"
+      ],
+      "acronyms": [
+        "S&P",
+        "IEEE S&P",
+        "IEEE SP",
+        "Oakland"
+      ]
+    },
+    {
+      "abbr": "CRYPTO",
+      "name": "International Cryptology Conference",
+      "type": "conference",
+      "category": "网络与信息安全",
+      "sourcePage": 20,
+      "officialAbbr": "CRYPTO",
+      "aliases": [],
+      "acronyms": [
+        "CRYPTO"
+      ]
+    },
+    {
+      "abbr": "USENIX Security",
+      "name": "USENIX Security Symposium",
+      "type": "conference",
+      "category": "网络与信息安全",
+      "sourcePage": 20,
+      "officialAbbr": "USENIX Security",
+      "aliases": [],
+      "acronyms": [
+        "USENIX Security"
+      ]
+    },
+    {
+      "abbr": "NDSS",
+      "name": "Network and Distributed System Security Symposium",
+      "type": "conference",
+      "category": "网络与信息安全",
+      "sourcePage": 20,
+      "officialAbbr": "NDSS",
+      "aliases": [],
+      "acronyms": [
+        "NDSS"
+      ]
+    },
+    {
+      "abbr": "TOPLAS",
+      "name": "ACM Transactions on Programming Languages and Systems",
+      "type": "journal",
+      "category": "软件工程/系统软件/程序设计语言",
+      "sourcePage": 24,
+      "officialAbbr": "TOPLAS",
+      "aliases": [
+        "ACM Trans. Program. Lang. Syst."
+      ],
+      "acronyms": [
+        "TOPLAS"
+      ]
+    },
+    {
+      "abbr": "TOSEM",
+      "name": "ACM Transactions on Software Engineering and Methodology",
+      "type": "journal",
+      "category": "软件工程/系统软件/程序设计语言",
+      "sourcePage": 24,
+      "officialAbbr": "TOSEM",
+      "aliases": [
+        "ACM Trans. Softw. Eng. Methodol."
+      ],
+      "acronyms": [
+        "TOSEM"
+      ]
+    },
+    {
+      "abbr": "TSE",
+      "name": "IEEE Transactions on Software Engineering",
+      "type": "journal",
+      "category": "软件工程/系统软件/程序设计语言",
+      "sourcePage": 24,
+      "officialAbbr": "TSE",
+      "aliases": [
+        "IEEE Trans. Softw. Eng."
+      ],
+      "acronyms": [
+        "TSE"
+      ]
+    },
+    {
+      "abbr": "TSC",
+      "name": "IEEE Transactions on Services Computing",
+      "type": "journal",
+      "category": "软件工程/系统软件/程序设计语言",
+      "sourcePage": 24,
+      "officialAbbr": "TSC",
+      "aliases": [
+        "IEEE Trans. Serv. Comput."
+      ],
+      "acronyms": [
+        "TSC"
+      ]
+    },
+    {
+      "abbr": "PLDI",
+      "name": "ACM SIGPLAN Conference on Programming Language Design and Implementation",
+      "type": "conference",
+      "category": "软件工程/系统软件/程序设计语言",
+      "sourcePage": 27,
+      "officialAbbr": "PLDI",
+      "aliases": [],
+      "acronyms": [
+        "PLDI"
+      ]
+    },
+    {
+      "abbr": "POPL",
+      "name": "ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages",
+      "type": "conference",
+      "category": "软件工程/系统软件/程序设计语言",
+      "sourcePage": 27,
+      "officialAbbr": "POPL",
+      "aliases": [],
+      "acronyms": [
+        "POPL"
+      ]
+    },
+    {
+      "abbr": "FSE",
+      "name": "ACM International Conference on the Foundations of Software Engineering",
+      "type": "conference",
+      "category": "软件工程/系统软件/程序设计语言",
+      "sourcePage": 27,
+      "officialAbbr": "FSE",
+      "aliases": [
+        "ESEC/FSE",
+        "ESEC FSE",
+        "ACM SIGSOFT Symposium on the Foundations of Software Engineering",
+        "ACM SIGSOFT International Symposium on Foundations of Software Engineering",
+        "Joint Meeting of the European Software Engineering Conference and the ACM SIGSOFT Symposium on the Foundations of Software Engineering",
+        "ACM Joint Meeting on European Software Engineering Conference and Symposium on the Foundations of Software Engineering"
+      ],
+      "acronyms": [
+        "FSE",
+        "ESEC/FSE",
+        "ESEC FSE"
+      ]
+    },
+    {
+      "abbr": "SOSP",
+      "name": "ACM Symposium on Operating Systems Principles",
+      "type": "conference",
+      "category": "软件工程/系统软件/程序设计语言",
+      "sourcePage": 27,
+      "officialAbbr": "SOSP",
+      "aliases": [],
+      "acronyms": [
+        "SOSP"
+      ]
+    },
+    {
+      "abbr": "OOPSLA",
+      "name": "Conference on Object-Oriented Programming Systems, Languages, and Applications",
+      "type": "conference",
+      "category": "软件工程/系统软件/程序设计语言",
+      "sourcePage": 27,
+      "officialAbbr": "OOPSLA",
+      "aliases": [
+        "Object Oriented Programming Systems Languages and Applications"
+      ],
+      "acronyms": [
+        "OOPSLA"
+      ]
+    },
+    {
+      "abbr": "ASE",
+      "name": "International Conference on Automated Software Engineering",
+      "type": "conference",
+      "category": "软件工程/系统软件/程序设计语言",
+      "sourcePage": 27,
+      "officialAbbr": "ASE",
+      "aliases": [],
+      "acronyms": [
+        "ASE"
+      ]
+    },
+    {
+      "abbr": "ICSE",
+      "name": "International Conference on Software Engineering",
+      "type": "conference",
+      "category": "软件工程/系统软件/程序设计语言",
+      "sourcePage": 27,
+      "officialAbbr": "ICSE",
+      "aliases": [],
+      "acronyms": [
+        "ICSE"
+      ]
+    },
+    {
+      "abbr": "ISSTA",
+      "name": "International Symposium on Software Testing and Analysis",
+      "type": "conference",
+      "category": "软件工程/系统软件/程序设计语言",
+      "sourcePage": 27,
+      "officialAbbr": "ISSTA",
+      "aliases": [],
+      "acronyms": [
+        "ISSTA"
+      ]
+    },
+    {
+      "abbr": "OSDI",
+      "name": "USENIX Symposium on Operating Systems Design and Implementation",
+      "type": "conference",
+      "category": "软件工程/系统软件/程序设计语言",
+      "sourcePage": 27,
+      "officialAbbr": "OSDI",
+      "aliases": [],
+      "acronyms": [
+        "OSDI"
+      ]
+    },
+    {
+      "abbr": "FM",
+      "name": "International Symposium on Formal Methods",
+      "type": "conference",
+      "category": "软件工程/系统软件/程序设计语言",
+      "sourcePage": 27,
+      "officialAbbr": "FM",
+      "aliases": [],
+      "acronyms": [
+        "FM"
+      ]
+    },
+    {
+      "abbr": "TODS",
+      "name": "ACM Transactions on Database Systems",
+      "type": "journal",
+      "category": "数据库/数据挖掘/内容检索",
+      "sourcePage": 32,
+      "officialAbbr": "TODS",
+      "aliases": [
+        "ACM Trans. Database Syst."
+      ],
+      "acronyms": [
+        "TODS"
+      ]
+    },
+    {
+      "abbr": "TOIS",
+      "name": "ACM Transactions on Information Systems",
+      "type": "journal",
+      "category": "数据库/数据挖掘/内容检索",
+      "sourcePage": 32,
+      "officialAbbr": "TOIS",
+      "aliases": [
+        "ACM Trans. Inf. Syst."
+      ],
+      "acronyms": [
+        "TOIS"
+      ]
+    },
+    {
+      "abbr": "TKDE",
+      "name": "IEEE Transactions on Knowledge and Data Engineering",
+      "type": "journal",
+      "category": "数据库/数据挖掘/内容检索",
+      "sourcePage": 32,
+      "officialAbbr": "TKDE",
+      "aliases": [
+        "IEEE Trans. Knowl. Data Eng."
+      ],
+      "acronyms": [
+        "TKDE"
+      ]
+    },
+    {
+      "abbr": "VLDBJ",
+      "name": "The VLDB Journal",
+      "type": "journal",
+      "category": "数据库/数据挖掘/内容检索",
+      "sourcePage": 32,
+      "officialAbbr": "VLDBJ",
+      "aliases": [
+        "VLDB Journal",
+        "VLDB J."
+      ],
+      "acronyms": [
+        "VLDBJ",
+        "VLDB Journal",
+        "VLDB J."
+      ]
+    },
+    {
+      "abbr": "SIGMOD",
+      "name": "ACM SIGMOD Conference",
+      "type": "conference",
+      "category": "数据库/数据挖掘/内容检索",
+      "sourcePage": 35,
+      "officialAbbr": "SIGMOD",
+      "aliases": [
+        "ACM SIGMOD International Conference on Management of Data",
+        "International Conference on Management of Data"
+      ],
+      "acronyms": [
+        "SIGMOD"
+      ]
+    },
+    {
+      "abbr": "SIGKDD",
+      "name": "ACM SIGKDD Conference on Knowledge Discovery and Data Mining",
+      "type": "conference",
+      "category": "数据库/数据挖掘/内容检索",
+      "sourcePage": 35,
+      "officialAbbr": "SIGKDD",
+      "aliases": [
+        "KDD",
+        "ACM SIGKDD International Conference on Knowledge Discovery and Data Mining"
+      ],
+      "acronyms": [
+        "SIGKDD",
+        "KDD"
+      ]
+    },
+    {
+      "abbr": "ICDE",
+      "name": "IEEE International Conference on Data Engineering",
+      "type": "conference",
+      "category": "数据库/数据挖掘/内容检索",
+      "sourcePage": 35,
+      "officialAbbr": "ICDE",
+      "aliases": [],
+      "acronyms": [
+        "ICDE"
+      ]
+    },
+    {
+      "abbr": "SIGIR",
+      "name": "International ACM SIGIR Conference on Research and Development in Information Retrieval",
+      "type": "conference",
+      "category": "数据库/数据挖掘/内容检索",
+      "sourcePage": 35,
+      "officialAbbr": "SIGIR",
+      "aliases": [],
+      "acronyms": [
+        "SIGIR"
+      ]
+    },
+    {
+      "abbr": "VLDB",
+      "name": "International Conference on Very Large Data Bases",
+      "type": "conference",
+      "category": "数据库/数据挖掘/内容检索",
+      "sourcePage": 35,
+      "officialAbbr": "VLDB",
+      "aliases": [],
+      "acronyms": [
+        "VLDB"
+      ]
+    },
+    {
+      "abbr": "TIT",
+      "name": "IEEE Transactions on Information Theory",
+      "type": "journal",
+      "category": "计算机科学理论",
+      "sourcePage": 38,
+      "officialAbbr": "TIT",
+      "aliases": [
+        "IEEE Trans. Inf. Theory"
+      ],
+      "acronyms": [
+        "TIT"
+      ]
+    },
+    {
+      "abbr": "IANDC",
+      "name": "Information and Computation",
+      "type": "journal",
+      "category": "计算机科学理论",
+      "sourcePage": 38,
+      "officialAbbr": "IANDC",
+      "aliases": [
+        "Inf. Comput."
+      ],
+      "acronyms": [
+        "IANDC",
+        "Inf. Comput."
+      ]
+    },
+    {
+      "abbr": "SICOMP",
+      "name": "SIAM Journal on Computing",
+      "type": "journal",
+      "category": "计算机科学理论",
+      "sourcePage": 38,
+      "officialAbbr": "SICOMP",
+      "aliases": [
+        "SIAM J. Comput."
+      ],
+      "acronyms": [
+        "SICOMP",
+        "SIAM J. Comput."
+      ]
+    },
+    {
+      "abbr": "STOC",
+      "name": "ACM Symposium on the Theory of Computing",
+      "type": "conference",
+      "category": "计算机科学理论",
+      "sourcePage": 41,
+      "officialAbbr": "STOC",
+      "aliases": [
+        "ACM Symposium on Theory of Computing"
+      ],
+      "acronyms": [
+        "STOC"
+      ]
+    },
+    {
+      "abbr": "SODA",
+      "name": "ACM-SIAM Symposium on Discrete Algorithms",
+      "type": "conference",
+      "category": "计算机科学理论",
+      "sourcePage": 41,
+      "officialAbbr": "SODA",
+      "aliases": [],
+      "acronyms": [
+        "SODA"
+      ]
+    },
+    {
+      "abbr": "CAV",
+      "name": "International Conference on Computer Aided Verification",
+      "type": "conference",
+      "category": "计算机科学理论",
+      "sourcePage": 41,
+      "officialAbbr": "CAV",
+      "aliases": [],
+      "acronyms": [
+        "CAV"
+      ]
+    },
+    {
+      "abbr": "FOCS",
+      "name": "IEEE Annual Symposium on Foundations of Computer Science",
+      "type": "conference",
+      "category": "计算机科学理论",
+      "sourcePage": 41,
+      "officialAbbr": "FOCS",
+      "aliases": [],
+      "acronyms": [
+        "FOCS"
+      ]
+    },
+    {
+      "abbr": "LICS",
+      "name": "ACM/IEEE Symposium on Logic in Computer Science",
+      "type": "conference",
+      "category": "计算机科学理论",
+      "sourcePage": 41,
+      "officialAbbr": "LICS",
+      "aliases": [],
+      "acronyms": [
+        "LICS"
+      ]
+    },
+    {
+      "abbr": "TOG",
+      "name": "ACM Transactions on Graphics",
+      "type": "journal",
+      "category": "计算机图形学与多媒体",
+      "sourcePage": 44,
+      "officialAbbr": "TOG",
+      "aliases": [
+        "ACM Trans. Graph."
+      ],
+      "acronyms": [
+        "TOG",
+        "ACM Trans. Graph."
+      ]
+    },
+    {
+      "abbr": "TIP",
+      "name": "IEEE Transactions on Image Processing",
+      "type": "journal",
+      "category": "计算机图形学与多媒体",
+      "sourcePage": 44,
+      "officialAbbr": "TIP",
+      "aliases": [
+        "IEEE Trans. Image Process."
+      ],
+      "acronyms": [
+        "TIP"
+      ]
+    },
+    {
+      "abbr": "TVCG",
+      "name": "IEEE Transactions on Visualization and Computer Graphics",
+      "type": "journal",
+      "category": "计算机图形学与多媒体",
+      "sourcePage": 44,
+      "officialAbbr": "TVCG",
+      "aliases": [
+        "IEEE Trans. Vis. Comput. Graph."
+      ],
+      "acronyms": [
+        "TVCG"
+      ]
+    },
+    {
+      "abbr": "TMM",
+      "name": "IEEE Transactions on Multimedia",
+      "type": "journal",
+      "category": "计算机图形学与多媒体",
+      "sourcePage": 44,
+      "officialAbbr": "TMM",
+      "aliases": [
+        "IEEE Trans. Multimedia"
+      ],
+      "acronyms": [
+        "TMM"
+      ]
+    },
+    {
+      "abbr": "ACM MM",
+      "name": "ACM International Conference on Multimedia",
+      "type": "conference",
+      "category": "计算机图形学与多媒体",
+      "sourcePage": 47,
+      "officialAbbr": "ACM MM",
+      "aliases": [
+        "MM",
+        "ACM Multimedia",
+        "ACM International Conference on Multimedia"
+      ],
+      "acronyms": [
+        "ACM MM",
+        "MM",
+        "ACM Multimedia"
+      ]
+    },
+    {
+      "abbr": "SIGGRAPH",
+      "name": "ACM Special Interest Group on Computer Graphics",
+      "type": "conference",
+      "category": "计算机图形学与多媒体",
+      "sourcePage": 47,
+      "officialAbbr": "SIGGRAPH",
+      "aliases": [
+        "ACM SIGGRAPH",
+        "Computer Graphics and Interactive Techniques",
+        "ACM SIGGRAPH Conference on Computer Graphics and Interactive Techniques"
+      ],
+      "acronyms": [
+        "SIGGRAPH",
+        "ACM SIGGRAPH"
+      ]
+    },
+    {
+      "abbr": "VR",
+      "name": "IEEE Conference on Virtual Reality and 3D User Interfaces",
+      "type": "conference",
+      "category": "计算机图形学与多媒体",
+      "sourcePage": 47,
+      "officialAbbr": "VR",
+      "aliases": [
+        "IEEE Conference on Virtual Reality and 3D User Interfaces（原 IEEE Virtual Reality）",
+        "IEEE Virtual Reality",
+        "IEEE Virtual Reality and 3D User Interfaces"
+      ],
+      "acronyms": [
+        "VR",
+        "IEEE Virtual Reality"
+      ]
+    },
+    {
+      "abbr": "IEEE VIS",
+      "name": "IEEE Visualization Conference",
+      "type": "conference",
+      "category": "计算机图形学与多媒体",
+      "sourcePage": 47,
+      "officialAbbr": "IEEE VIS",
+      "aliases": [
+        "VIS",
+        "IEEE Visualization",
+        "IEEE Conference on Visualization"
+      ],
+      "acronyms": [
+        "IEEE VIS",
+        "VIS",
+        "IEEE Visualization"
+      ]
+    },
+    {
+      "abbr": "AI",
+      "name": "Artificial Intelligence",
+      "type": "journal",
+      "category": "人工智能",
+      "sourcePage": 51,
+      "officialAbbr": "AI",
+      "aliases": [
+        "Artif. Intell.",
+        "AIJ"
+      ],
+      "acronyms": [
+        "AI",
+        "Artif. Intell.",
+        "AIJ"
+      ]
+    },
+    {
+      "abbr": "TPAMI",
+      "name": "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+      "type": "journal",
+      "category": "人工智能",
+      "sourcePage": 51,
+      "officialAbbr": "TPAMI",
+      "aliases": [
+        "PAMI",
+        "IEEE Trans. Pattern Anal. Mach. Intell."
+      ],
+      "acronyms": [
+        "TPAMI",
+        "PAMI"
+      ]
+    },
+    {
+      "abbr": "IJCV",
+      "name": "International Journal of Computer Vision",
+      "type": "journal",
+      "category": "人工智能",
+      "sourcePage": 51,
+      "officialAbbr": "IJCV",
+      "aliases": [
+        "Int. J. Comput. Vis."
+      ],
+      "acronyms": [
+        "IJCV"
+      ]
+    },
+    {
+      "abbr": "JMLR",
+      "name": "Journal of Machine Learning Research",
+      "type": "journal",
+      "category": "人工智能",
+      "sourcePage": 51,
+      "officialAbbr": "JMLR",
+      "aliases": [
+        "J. Mach. Learn. Res."
+      ],
+      "acronyms": [
+        "JMLR"
+      ]
+    },
+    {
+      "abbr": "AAAI",
+      "name": "AAAI Conference on Artificial Intelligence",
+      "type": "conference",
+      "category": "人工智能",
+      "sourcePage": 57,
+      "officialAbbr": "AAAI",
+      "aliases": [
+        "Proceedings of the AAAI Conference on Artificial Intelligence",
+        "National Conference on Artificial Intelligence"
+      ],
+      "acronyms": [
+        "AAAI"
+      ]
+    },
+    {
+      "abbr": "NeurIPS",
+      "name": "Conference on Neural Information Processing Systems",
+      "type": "conference",
+      "category": "人工智能",
+      "sourcePage": 57,
+      "officialAbbr": "NeurIPS",
+      "aliases": [
+        "NIPS",
+        "Advances in Neural Information Processing Systems",
+        "Neural Information Processing Systems"
+      ],
+      "acronyms": [
+        "NeurIPS",
+        "NIPS"
+      ]
+    },
+    {
+      "abbr": "ACL",
+      "name": "Annual Meeting of the Association for Computational Linguistics",
+      "type": "conference",
+      "category": "人工智能",
+      "sourcePage": 57,
+      "officialAbbr": "ACL",
+      "aliases": [],
+      "acronyms": [
+        "ACL"
+      ]
+    },
+    {
+      "abbr": "CVPR",
+      "name": "IEEE/CVF Computer Vision and Pattern Recognition Conference",
+      "type": "conference",
+      "category": "人工智能",
+      "sourcePage": 57,
+      "officialAbbr": "CVPR",
+      "aliases": [
+        "IEEE Conference on Computer Vision and Pattern Recognition",
+        "IEEE/CVF Conference on Computer Vision and Pattern Recognition",
+        "Computer Vision and Pattern Recognition"
+      ],
+      "acronyms": [
+        "CVPR"
+      ]
+    },
+    {
+      "abbr": "ICCV",
+      "name": "International Conference on Computer Vision",
+      "type": "conference",
+      "category": "人工智能",
+      "sourcePage": 57,
+      "officialAbbr": "ICCV",
+      "aliases": [
+        "IEEE International Conference on Computer Vision",
+        "IEEE/CVF International Conference on Computer Vision"
+      ],
+      "acronyms": [
+        "ICCV"
+      ]
+    },
+    {
+      "abbr": "ICML",
+      "name": "International Conference on Machine Learning",
+      "type": "conference",
+      "category": "人工智能",
+      "sourcePage": 57,
+      "officialAbbr": "ICML",
+      "aliases": [],
+      "acronyms": [
+        "ICML"
+      ]
+    },
+    {
+      "abbr": "ICLR",
+      "name": "International Conference on Learning Representations",
+      "type": "conference",
+      "category": "人工智能",
+      "sourcePage": 57,
+      "officialAbbr": "ICLR",
+      "aliases": [],
+      "acronyms": [
+        "ICLR"
+      ]
+    },
+    {
+      "abbr": "TOCHI",
+      "name": "ACM Transactions on Computer-Human Interaction",
+      "type": "journal",
+      "category": "人机交互与普适计算",
+      "sourcePage": 61,
+      "officialAbbr": "TOCHI",
+      "aliases": [
+        "ACM Trans. Comput.-Hum. Interact."
+      ],
+      "acronyms": [
+        "TOCHI"
+      ]
+    },
+    {
+      "abbr": "IJHCS",
+      "name": "International Journal of Human-Computer Studies",
+      "type": "journal",
+      "category": "人机交互与普适计算",
+      "sourcePage": 61,
+      "officialAbbr": "IJHCS",
+      "aliases": [
+        "Int. J. Hum.-Comput. Stud."
+      ],
+      "acronyms": [
+        "IJHCS"
+      ]
+    },
+    {
+      "abbr": "CSCW",
+      "name": "ACM Conference On Computer-Supported Cooperative Work And Social Computing",
+      "type": "conference",
+      "category": "人机交互与普适计算",
+      "sourcePage": 64,
+      "officialAbbr": "CSCW",
+      "aliases": [
+        "ACM Conference on Computer Supported Cooperative Work",
+        "Computer Supported Cooperative Work and Social Computing"
+      ],
+      "acronyms": [
+        "CSCW"
+      ]
+    },
+    {
+      "abbr": "CHI",
+      "name": "ACM Conference on Human Factors in Computing Systems",
+      "type": "conference",
+      "category": "人机交互与普适计算",
+      "sourcePage": 64,
+      "officialAbbr": "CHI",
+      "aliases": [
+        "CHI Conference on Human Factors in Computing Systems",
+        "SIGCHI Conference on Human Factors in Computing Systems"
+      ],
+      "acronyms": [
+        "CHI"
+      ]
+    },
+    {
+      "abbr": "UbiComp",
+      "name": "ACM international joint conference on Pervasive and Ubiquitous Computing",
+      "type": "conference",
+      "category": "人机交互与普适计算",
+      "sourcePage": 64,
+      "officialAbbr": "UbiComp",
+      "aliases": [
+        "International Conference on Ubiquitous Computing",
+        "Ubiquitous Computing"
+      ],
+      "acronyms": [
+        "UbiComp",
+        "Ubiquitous Computing"
+      ]
+    },
+    {
+      "abbr": "UIST",
+      "name": "ACM Symposium on User Interface Software and Technology",
+      "type": "conference",
+      "category": "人机交互与普适计算",
+      "sourcePage": 64,
+      "officialAbbr": "UIST",
+      "aliases": [],
+      "acronyms": [
+        "UIST"
+      ]
+    },
+    {
+      "abbr": "JACM",
+      "name": "Journal of the ACM",
+      "type": "journal",
+      "category": "交叉/综合/新兴",
+      "sourcePage": 67,
+      "officialAbbr": "JACM",
+      "aliases": [
+        "J. ACM",
+        "Journal of the Association for Computing Machinery"
+      ],
+      "acronyms": [
+        "JACM",
+        "J. ACM"
+      ]
+    },
+    {
+      "abbr": "Proc. IEEE",
+      "name": "Proceedings of the IEEE",
+      "type": "journal",
+      "category": "交叉/综合/新兴",
+      "sourcePage": 67,
+      "officialAbbr": "Proc. IEEE",
+      "aliases": [
+        "Proceedings of IEEE"
+      ],
+      "acronyms": [
+        "Proc. IEEE",
+        "Proceedings of IEEE"
+      ]
+    },
+    {
+      "abbr": "SCIS",
+      "name": "Science China Information Sciences",
+      "type": "journal",
+      "category": "交叉/综合/新兴",
+      "sourcePage": 67,
+      "officialAbbr": "SCIS",
+      "aliases": [
+        "Sci. China Inf. Sci.",
+        "SCIENCE CHINA Information Sciences"
+      ],
+      "acronyms": [
+        "SCIS"
+      ]
+    },
+    {
+      "abbr": "Bioinformatics",
+      "name": "Bioinformatics",
+      "type": "journal",
+      "category": "交叉/综合/新兴",
+      "sourcePage": 67,
+      "officialAbbr": "Bioinformatics",
+      "aliases": [],
+      "acronyms": [
+        "Bioinformatics"
+      ]
+    },
+    {
+      "abbr": "WWW",
+      "name": "The Web Conference",
+      "type": "conference",
+      "category": "交叉/综合/新兴",
+      "sourcePage": 70,
+      "officialAbbr": "WWW",
+      "aliases": [
+        "The Web Conference（原 International World Wide Web Conference）",
+        "International World Wide Web Conference",
+        "International Conference on World Wide Web",
+        "ACM Web Conference"
+      ],
+      "acronyms": [
+        "WWW",
+        "ACM Web Conference"
+      ]
+    },
+    {
+      "abbr": "RTSS",
+      "name": "IEEE Real-Time Systems Symposium",
+      "type": "conference",
+      "category": "交叉/综合/新兴",
+      "sourcePage": 70,
+      "officialAbbr": "RTSS",
+      "aliases": [],
+      "acronyms": [
+        "RTSS"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+name: Test, build and release CCFA
+
+on:
+  push:
+    branches: [main]
+    paths: [manifest.json]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ccfa-release
+  cancel-in-progress: false
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: '22'
+      - name: Test
+        run: npm test
+      - name: Build deterministic XPI
+        run: python3 scripts/build.py
+      - name: Publish a new version without replacing existing releases
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          version="$(node -p "require('./manifest.json').version")"
+          package_version="$(node -p "require('./package.json').version")"
+          test "$version" = "$package_version"
+          tag="v$version"
+          if gh release view "$tag" > /dev/null 2>&1; then
+            echo "Release $tag already exists; leaving it unchanged."
+            exit 0
+          fi
+          if gh api "repos/$GH_REPO/git/ref/tags/$tag" > /dev/null 2>&1; then
+            echo "Tag $tag exists without a release; inspect it before publishing."
+            exit 1
+          fi
+          gh release create "$tag" \
+            "dist/ccfa-$version.xpi" dist/updates.json dist/SHA256SUMS.txt \
+            --target "$GITHUB_SHA" --title "CCFA $version" \
+            --notes-file RELEASE_NOTES.md --latest

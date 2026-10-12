@@ -1,0 +1,16 @@
+{
+  "manifest_version": 2,
+  "name": "CCFA",
+  "version": "1.0.0",
+  "description": "在 Zotero 文献列表显示 CCF A 类期刊与会议简称（2026 第七版目录）。",
+  "author": "ThaneJoss",
+  "homepage_url": "https://github.com/ThaneJoss/ccfa",
+  "applications": {
+    "zotero": {
+      "id": "ccfa@thanejoss.github.io",
+      "strict_min_version": "7.0",
+      "strict_max_version": "8.0.*",
+      "update_url": "https://github.com/ThaneJoss/ccfa/releases/latest/download/updates.json"
+    }
+  }
+}
