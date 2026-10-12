@@ -1,11 +1,13 @@
 {
   "name": "zotero-ccfa",
   "private": true,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "CCF A venue abbreviations in a Zotero column",
   "scripts": {
     "test": "node --test tests/*.test.cjs",
     "build": "python3 scripts/build.py"
   },
-  "engines": { "node": ">=20" }
+  "engines": {
+    "node": ">=20"
+  }
 }

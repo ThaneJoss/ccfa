@@ -6,12 +6,12 @@
 
 ## 安装
 
-1. 从 [Releases](https://github.com/ThaneJoss/ccfa/releases/latest) 下载 `ccfa-1.0.0.xpi`。不要下载 GitHub 自动生成的 Source code ZIP。
+1. 从 [Releases](https://github.com/ThaneJoss/ccfa/releases/latest) 下载 `ccfa-1.0.1.xpi`。不要下载 GitHub 自动生成的 Source code ZIP。
 2. 在 Zotero 桌面版中打开 **工具 → 插件**（部分版本为“附加组件”）。
 3. 点击齿轮菜单 → **Install Add-on From File / 从文件安装插件**，选择 `.xpi`。
 4. 在文献列表表头右键，勾选 **CCFA**。可拖动列位置、调整宽度或点击表头排序。
 
-插件启用后随 Zotero 启动自动加载，重启后无需运行 JavaScript。面向 **Zotero 7 / 8 桌面版**；不适用于 Zotero 6、网页版或移动版。
+插件启用后随 Zotero 启动自动加载，重启后无需运行 JavaScript。面向 **Zotero 7 / 8 / 9 / 10 桌面版**；不适用于 Zotero 6、网页版或移动版。
 
 ## 匹配方式
 
@@ -43,7 +43,7 @@ Journal of Cryptology 在官方表中没有简称，本插件显示 `J. Cryptol.
 
 - [CCF 官方第七版正式发布说明](https://www.ccf.org.cn/Academic_Evaluation/By_category/)（2026-03-31 发布；官网注明 4 月 9 日勘误）。
 - [CCF 编制的正式目录 PDF，丽水学院科研处公开副本](https://kyc.lsu.edu.cn/_upload/article/files/20/77/2cbaa3754eb9aff9ed74cafed8ff/23a8de02-594c-445f-b084-69b0193c05b3.pdf)。全部 95 个 A 类条目的全称和简称已逐项核对；`data/catalog.json` 记录页码及 PDF SHA-256。
-- [Zotero 7 插件开发文档](https://www.zotero.org/support/dev/zotero_7_for_developers)、[Zotero 8 插件开发文档](https://www.zotero.org/support/dev/zotero_8_for_developers)。
+- [Zotero 7 插件开发文档](https://www.zotero.org/support/dev/zotero_7_for_developers)、[Zotero 8 插件开发文档](https://www.zotero.org/support/dev/zotero_8_for_developers)、[Zotero 9 插件开发文档](https://www.zotero.org/support/dev/zotero_9_for_developers)、[Zotero 10 插件开发文档](https://www.zotero.org/support/dev/zotero_10_for_developers)。
 
 本项目是第三方工具，与 CCF、Zotero 无隶属关系；目录名称与分类信息来源于 CCF。
 

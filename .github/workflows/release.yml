@@ -27,6 +27,8 @@ jobs:
         run: npm test
       - name: Build deterministic XPI
         run: python3 scripts/build.py
+      - name: Install and restart in real Zotero 10
+        run: python3 scripts/smoke-zotero.py
       - name: Publish a new version without replacing existing releases
         env:
           GH_TOKEN: ${{ github.token }}
@@ -47,6 +49,6 @@ jobs:
             exit 1
           fi
           gh release create "$tag" \
-            "dist/ccfa-$version.xpi" dist/updates.json dist/SHA256SUMS.txt \
+            "dist/ccfa-$version.xpi" dist/updates.json dist/SHA256SUMS.txt dist/zotero-smoke.json \
             --target "$GITHUB_SHA" --title "CCFA $version" \
             --notes-file RELEASE_NOTES.md --latest
