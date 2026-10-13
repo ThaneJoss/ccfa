@@ -18,7 +18,7 @@
 - 读取出版物标题及其 Zotero 映射字段、论文集标题、书名、会议名称。标题缺失时可读取期刊简称。
 - 兼容大小写、空白、全角字符、年份、会议届次、常见出版社前缀、旧名称和 NIPS 等旧简称。
 - 字典采用确定性名称匹配；不在论文标题、摘要、标签里搜索缩写，不用模糊相似度猜测归属。
-- 出版物名称出现 Workshop、Findings、Companion、Short papers 等标记时留空；不同字段指向不同会议时也留空。
+- 出版物名称出现 Workshop、CVPRW、ICCVW、Findings、Companion、Short papers 等标记时留空，即使另一字段填写了主会议；不同字段指向不同会议时也留空。
 - 简称实时计算，不写入 Extra，不保存或修改任何条目。现有 Extra 内容保持原样，新导入或修改的条目使用同一规则。
 - 本地离线识别。插件本身不上传文献信息；Zotero 的标准插件更新机制会访问 GitHub 的更新清单。
 
@@ -52,14 +52,19 @@ Journal of Cryptology 在官方表中没有简称，本插件显示 `J. Cryptol.
 无需 npm 依赖。需要 Node.js 20+ 和 Python 3：
 
 ```sh
+node --check src/bootstrap.js
+node --check src/matcher.js
 npm test
-python3 scripts/build.py
+python3 -m unittest discover -s tests -p 'test_*.py' -v
+npm run build
 ```
 
-`dist/` 输出 `.xpi`、`updates.json` 和 `SHA256SUMS.txt`。XPI 使用固定时间戳，可重复构建。字典维护入口为 `data/catalog.json`。
+`dist/` 输出 `.xpi`、`updates.json` 和 `SHA256SUMS.txt`。构建前检查 `manifest.json` 与 `package.json` 版本一致。XPI 使用固定时间戳，可重复构建；构建测试在临时目录中验证产物及更新清单的校验和、重复构建一致性，并加载实际打包的字典与脚本检查列行为。字典维护入口为 `data/catalog.json`。
 
-自动化验证包含完整字典、名称变体、非 A 类和 Workshop 排除、只读元数据行为、插件启用/禁用及启动中取消。1.0.1 起，发布流程还会在独立的真实 Zotero 10.0.6 Linux 测试配置中检查安装、列注册、真实条目读取、禁用/启用和重启恢复；结果随 Release 的 `zotero-smoke.json` 提供。Windows/macOS 未实机验证。
+所有 Pull Request 和 `main` 推送均运行 [Check CCFA](.github/workflows/ci.yml)：在 Node.js 20、22、24 与 Python 3.12 下检查 JavaScript/Python 语法，执行 JavaScript 单元测试、Python 构建测试并打包 XPI。无需安装 npm 依赖。这些检查覆盖完整字典、名称变体、非 A 类和 Workshop 排除、只读元数据行为、插件启用/禁用及启动中取消，以及构建产物；语法检查不等同于完整 lint 或类型检查。
+
+PR CI 不下载或启动 Zotero，也不发布 Release。1.0.1 起，[发布流程](.github/workflows/release.yml) 会额外在独立的真实 Zotero 10.0.6 Linux 测试配置中检查安装、列注册、真实条目读取、禁用/启用和重启恢复；结果随 Release 的 `zotero-smoke.json` 提供。单元测试不能替代此项验证，Windows/macOS 未实机验证。
 
 ## 发布
 
-将版本号同步更新至 `manifest.json` 和 `package.json`，准备 `RELEASE_NOTES.md`，推送 `main`。当 `manifest.json` 变更时，GitHub Actions 会先测试、打包，再为尚不存在的版本创建 Release 并上传 `.xpi`、更新清单和校验文件。也可手动触发工作流。已有 Release 不会被覆盖。
+将版本号同步更新至 `manifest.json` 和 `package.json`，准备 `RELEASE_NOTES.md`，推送 `main`。当推送涉及 `manifest.json`、`scripts/smoke-zotero.py` 或 `.github/workflows/release.yml` 时，发布工作流会先运行 JavaScript 测试、打包和真实 Zotero 验证，再为尚不存在的版本创建 Release 并上传 `.xpi`、更新清单、校验文件及验证报告。也可手动触发工作流。仅修改其他文件会运行 PR/main CI，不会自动触发发布流程。已有 Release 不会被覆盖。
