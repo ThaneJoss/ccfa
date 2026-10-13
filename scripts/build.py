@@ -7,6 +7,9 @@ from zipfile import ZipFile, ZipInfo, ZIP_DEFLATED
 
 ROOT = Path(__file__).resolve().parents[1]
 manifest = json.loads((ROOT / "manifest.json").read_text(encoding="utf-8"))
+package = json.loads((ROOT / "package.json").read_text(encoding="utf-8"))
+if manifest["version"] != package["version"]:
+    raise ValueError("manifest.json and package.json version must match")
 catalog = json.loads((ROOT / "data/catalog.json").read_text(encoding="utf-8"))
 assert len(catalog["venues"]) == 95
 assert sum(v["type"] == "journal" for v in catalog["venues"]) == 37
