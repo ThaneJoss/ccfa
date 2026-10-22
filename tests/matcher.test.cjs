@@ -110,6 +110,17 @@ test('conflicting fields and workshop containers require metadata correction', (
   assert.equal(matcher.forItem(item({ publicationTitle: 'CVPR Workshops', conferenceName: 'CVPR' })), '');
 });
 
+test('known workshop acronyms cannot inherit a parent conference from another field', () => {
+  for (const [container, conference] of [
+    ['CVPRW 2025', 'CVPR'],
+    ['ICCVW', 'ICCV'],
+    ['２０２５ ＣＶＰＲＷ', 'CVPR'],
+    ['iccvw 2025', 'ICCV']
+  ]) {
+    assert.equal(matcher.forItem(item({ proceedingsTitle: container, conferenceName: conference })), '', container);
+  }
+});
+
 test('edited item metadata is reflected immediately, without stale result caching', () => {
   const fields = { publicationTitle: 'CVPR' };
   const record = item(fields);

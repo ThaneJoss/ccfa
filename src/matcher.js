@@ -2,7 +2,7 @@
 "use strict";
 
 var CCFAMatcher = (() => {
-  const NON_MAIN = /\b(?:workshops?|companion|adjunct|findings|demos?|demonstrations?|tutorials?|posters?|doctoral|short papers?|extended abstracts?|technical briefs?|student research)\b/i;
+  const NON_MAIN = /\b(?:workshops?|cvprw|iccvw|companion|adjunct|findings|demos?|demonstrations?|tutorials?|posters?|doctoral|short papers?|extended abstracts?|technical briefs?|student research)\b/i;
   const WRAPPER = new Set([
     "proceedings", "proceeding", "of", "the", "on", "for", "and", "in",
     "acm", "ieee", "cvf", "ifip", "usenix", "sigplan", "sigact", "sigops", "siam",

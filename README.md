@@ -18,7 +18,7 @@
 - 读取出版物标题及其 Zotero 映射字段、论文集标题、书名、会议名称。标题缺失时可读取期刊简称。
 - 兼容大小写、空白、全角字符、年份、会议届次、常见出版社前缀、旧名称和 NIPS 等旧简称。
 - 字典采用确定性名称匹配；不在论文标题、摘要、标签里搜索缩写，不用模糊相似度猜测归属。
-- 出版物名称出现 Workshop、Findings、Companion、Short papers 等标记时留空；不同字段指向不同会议时也留空。
+- 出版物名称出现 Workshop、CVPRW、ICCVW、Findings、Companion、Short papers 等标记时留空，即使另一字段填写了主会议；不同字段指向不同会议时也留空。
 - 简称实时计算，不写入 Extra，不保存或修改任何条目。现有 Extra 内容保持原样，新导入或修改的条目使用同一规则。
 - 本地离线识别。插件本身不上传文献信息；Zotero 的标准插件更新机制会访问 GitHub 的更新清单。
 
@@ -52,13 +52,16 @@ Journal of Cryptology 在官方表中没有简称，本插件显示 `J. Cryptol.
 无需 npm 依赖。需要 Node.js 20+ 和 Python 3：
 
 ```sh
+node --check src/bootstrap.js
+node --check src/matcher.js
 npm test
-python3 scripts/build.py
+python3 -m unittest discover -s tests -p 'test_*.py' -v
+npm run build
 ```
 
-`dist/` 输出 `.xpi`、`updates.json` 和 `SHA256SUMS.txt`。XPI 使用固定时间戳，可重复构建。字典维护入口为 `data/catalog.json`。
+`dist/` 输出 `.xpi`、`updates.json` 和 `SHA256SUMS.txt`。构建前检查 `manifest.json` 与 `package.json` 版本一致。XPI 使用固定时间戳，可重复构建；构建测试在临时目录中验证产物及更新清单的校验和、重复构建一致性，并加载实际打包的字典与脚本检查列行为。字典维护入口为 `data/catalog.json`。
 
-所有推送、Pull Request、合并队列及手动触发均调用 [通用 CI](https://github.com/ThaneJoss/github-ci/blob/89624ba02d911171a634ddeb4848c298f3b1c842/.github/workflows/ci.yml)，固定版本为 `89624ba02d911171a634ddeb4848c298f3b1c842`。调用文件不添加项目专属参数、步骤或兼容矩阵；通用流程从标准元数据自动发现检查。本项目 `package.json` 声明了 `test` 和 `build`，原有测试和打包脚本保留。未被自动发现的检查不代表通过。
+所有推送、Pull Request、合并队列及手动触发均调用 [通用 CI](https://github.com/ThaneJoss/github-ci/blob/89624ba02d911171a634ddeb4848c298f3b1c842/.github/workflows/ci.yml)，固定版本为 `89624ba02d911171a634ddeb4848c298f3b1c842`。调用文件不添加项目专属参数、步骤或兼容矩阵；通用流程从标准元数据自动发现检查。本项目 `package.json` 声明了 `test` 和 `build`，通用流程执行 JavaScript 单元测试和 XPI 构建，并自动发现 `tests/test_build.py` 中的 Python 构建测试。语法检查不等同于完整 lint 或类型检查；未被自动发现的检查不代表通过。
 
 单元测试覆盖完整字典、名称变体、非 A 类和 Workshop 排除、只读元数据行为、插件启用/禁用及启动中取消。原先发布流程中的独立单元测试及真实 Zotero 10 安装/重启验证已移除；`scripts/smoke-zotero.py` 保留供手动验证，自动 CI 不下载或启动 Zotero，后续发布不再生成 `zotero-smoke.json`。Windows/macOS 未实机验证。
 
