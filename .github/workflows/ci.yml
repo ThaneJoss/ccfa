@@ -1,43 +1,11 @@
-name: Check CCFA
-
-on:
-  pull_request:
-  push:
-    branches: [main]
-
+name: CI
+'on':
+  push: {}
+  pull_request: {}
+  merge_group: {}
+  workflow_dispatch: {}
 permissions:
   contents: read
-
-concurrency:
-  group: ccfa-ci-${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
-
 jobs:
-  check:
-    name: Node ${{ matrix.node }} / Python 3.12
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
-    strategy:
-      fail-fast: false
-      matrix:
-        node: ['20', '22', '24']
-    steps:
-      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
-        with:
-          persist-credentials: false
-      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
-        with:
-          node-version: ${{ matrix.node }}
-      - uses: actions/setup-python@83679a892e2d95755f2dac6acb0bfd1e9ac5d548 # v6.1.0
-        with:
-          python-version: '3.12'
-      - name: Check JavaScript syntax
-        run: find src tests -type f \( -name '*.js' -o -name '*.cjs' \) -print0 | xargs -0 -r -n1 node --check
-      - name: Check Python syntax
-        run: find scripts tests -type f -name '*.py' -print0 | xargs -0 -r python3 -m py_compile
-      - name: Test matcher and plugin lifecycle
-        run: npm test
-      - name: Test build outputs
-        run: python3 -m unittest discover -s tests -p 'test_*.py' -v
-      - name: Build deterministic XPI
-        run: npm run build
+  ci:
+    uses: ThaneJoss/github-ci/.github/workflows/ci.yml@89624ba02d911171a634ddeb4848c298f3b1c842

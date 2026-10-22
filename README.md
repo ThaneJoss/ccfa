@@ -61,10 +61,10 @@ npm run build
 
 `dist/` 输出 `.xpi`、`updates.json` 和 `SHA256SUMS.txt`。构建前检查 `manifest.json` 与 `package.json` 版本一致。XPI 使用固定时间戳，可重复构建；构建测试在临时目录中验证产物及更新清单的校验和、重复构建一致性，并加载实际打包的字典与脚本检查列行为。字典维护入口为 `data/catalog.json`。
 
-所有 Pull Request 和 `main` 推送均运行 [Check CCFA](.github/workflows/ci.yml)：在 Node.js 20、22、24 与 Python 3.12 下检查 JavaScript/Python 语法，执行 JavaScript 单元测试、Python 构建测试并打包 XPI。无需安装 npm 依赖。这些检查覆盖完整字典、名称变体、非 A 类和 Workshop 排除、只读元数据行为、插件启用/禁用及启动中取消，以及构建产物；语法检查不等同于完整 lint 或类型检查。
+所有推送、Pull Request、合并队列及手动触发均调用 [通用 CI](https://github.com/ThaneJoss/github-ci/blob/89624ba02d911171a634ddeb4848c298f3b1c842/.github/workflows/ci.yml)，固定版本为 `89624ba02d911171a634ddeb4848c298f3b1c842`。调用文件不添加项目专属参数、步骤或兼容矩阵；通用流程从标准元数据自动发现检查。本项目 `package.json` 声明了 `test` 和 `build`，通用流程执行 JavaScript 单元测试和 XPI 构建，并自动发现 `tests/test_build.py` 中的 Python 构建测试。语法检查不等同于完整 lint 或类型检查；未被自动发现的检查不代表通过。
 
-PR CI 不下载或启动 Zotero，也不发布 Release。1.0.1 起，[发布流程](.github/workflows/release.yml) 会额外在独立的真实 Zotero 10.0.6 Linux 测试配置中检查安装、列注册、真实条目读取、禁用/启用和重启恢复；结果随 Release 的 `zotero-smoke.json` 提供。单元测试不能替代此项验证，Windows/macOS 未实机验证。
+单元测试覆盖完整字典、名称变体、非 A 类和 Workshop 排除、只读元数据行为、插件启用/禁用及启动中取消。原先发布流程中的独立单元测试及真实 Zotero 10 安装/重启验证已移除；`scripts/smoke-zotero.py` 保留供手动验证，自动 CI 不下载或启动 Zotero，后续发布不再生成 `zotero-smoke.json`。Windows/macOS 未实机验证。
 
 ## 发布
 
-将版本号同步更新至 `manifest.json` 和 `package.json`，准备 `RELEASE_NOTES.md`，推送 `main`。当推送涉及 `manifest.json`、`scripts/smoke-zotero.py` 或 `.github/workflows/release.yml` 时，发布工作流会先运行 JavaScript 测试、打包和真实 Zotero 验证，再为尚不存在的版本创建 Release 并上传 `.xpi`、更新清单、校验文件及验证报告。也可手动触发工作流。仅修改其他文件会运行 PR/main CI，不会自动触发发布流程。已有 Release 不会被覆盖。
+将版本号同步更新至 `manifest.json` 和 `package.json`，准备 `RELEASE_NOTES.md`，推送 `main`。现有发布触发范围保持为 `manifest.json`、`scripts/smoke-zotero.py` 或 `.github/workflows/release.yml` 的变更，也可手动触发。[发布流程](.github/workflows/release.yml) 只负责打包及为尚不存在的版本创建 Release，上传 `.xpi`、更新清单和校验文件；版本一致性及已有 Tag/Release 保护保留。通用 CI 独立运行，发布流程不再执行单元测试或真实 Zotero 验证，且没有新增通用 CI 成功依赖。已有 Release 不会被覆盖。
