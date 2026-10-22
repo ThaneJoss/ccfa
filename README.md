@@ -61,7 +61,7 @@ npm run build
 
 `dist/` 输出 `.xpi`、`updates.json` 和 `SHA256SUMS.txt`。构建前检查 `manifest.json` 与 `package.json` 版本一致。XPI 使用固定时间戳，可重复构建；构建测试在临时目录中验证产物及更新清单的校验和、重复构建一致性，并加载实际打包的字典与脚本检查列行为。字典维护入口为 `data/catalog.json`。
 
-所有推送、Pull Request、合并队列及手动触发均调用 [通用 CI](https://github.com/ThaneJoss/github-ci/blob/89624ba02d911171a634ddeb4848c298f3b1c842/.github/workflows/ci.yml)，固定版本为 `89624ba02d911171a634ddeb4848c298f3b1c842`。调用文件不添加项目专属参数、步骤或兼容矩阵；通用流程从标准元数据自动发现检查。本项目 `package.json` 声明了 `test` 和 `build`，通用流程执行 JavaScript 单元测试和 XPI 构建，并自动发现 `tests/test_build.py` 中的 Python 构建测试。语法检查不等同于完整 lint 或类型检查；未被自动发现的检查不代表通过。
+所有推送、Pull Request、合并队列及手动触发均以 `@main` 调用 [通用 CI](https://github.com/ThaneJoss/github-ci/blob/main/.github/workflows/ci.yml)。每次新运行使用当时 `main` 的版本，实际解析的提交以运行记录为准。调用文件不添加项目专属参数、步骤或兼容矩阵；通用流程从标准元数据自动发现检查。本项目 `package.json` 声明了 `test` 和 `build`，通用流程执行 JavaScript 单元测试和 XPI 构建，并自动发现 `tests/test_build.py` 中的 Python 构建测试。语法检查不等同于完整 lint 或类型检查；未被自动发现的检查不代表通过。
 
 单元测试覆盖完整字典、名称变体、非 A 类和 Workshop 排除、只读元数据行为、插件启用/禁用及启动中取消。原先发布流程中的独立单元测试及真实 Zotero 10 安装/重启验证已移除；`scripts/smoke-zotero.py` 保留供手动验证，自动 CI 不下载或启动 Zotero，后续发布不再生成 `zotero-smoke.json`。Windows/macOS 未实机验证。
 
