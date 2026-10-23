@@ -7,16 +7,34 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
 
 concurrency:
   group: ccfa-release
   cancel-in-progress: false
 
 jobs:
+  quality:
+    permissions:
+      contents: read
+    uses: ThaneJoss/github-ci/.github/workflows/ci.yml@main
+
   release:
+    needs: quality
     runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
     steps:
+      - name: Require completed quality checks for this release
+        env:
+          QUALITY_PASSED: ${{ needs.quality.outputs.quality-passed }}
+        shell: bash
+        run: |
+          if [[ "$QUALITY_PASSED" != "true" ]]; then
+            echo "::error::Quality checks did not return completion proof for this release."
+            exit 1
+          fi
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
           persist-credentials: false

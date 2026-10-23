@@ -67,4 +67,4 @@ npm run build
 
 ## 发布
 
-将版本号同步更新至 `manifest.json` 和 `package.json`，准备 `RELEASE_NOTES.md`，推送 `main`。现有发布触发范围保持为 `manifest.json`、`scripts/smoke-zotero.py` 或 `.github/workflows/release.yml` 的变更，也可手动触发。[发布流程](.github/workflows/release.yml) 只负责打包及为尚不存在的版本创建 Release，上传 `.xpi`、更新清单和校验文件；版本一致性及已有 Tag/Release 保护保留。通用 CI 独立运行，发布流程不再执行单元测试或真实 Zotero 验证，且没有新增通用 CI 成功依赖。已有 Release 不会被覆盖。
+将版本号同步更新至 `manifest.json` 和 `package.json`，准备 `RELEASE_NOTES.md`，推送 `main`。现有发布触发范围保持为 `manifest.json`、`scripts/smoke-zotero.py` 或 `.github/workflows/release.yml` 的变更，也可手动触发。[发布流程](.github/workflows/release.yml) 先以只读权限调用通用 CI，验证本次发布触发的同一提交；发布 job 依赖检查成功，并首先验证 `quality-passed=true`，缺失或不满足时直接失败，不执行打包及发布。只有发布 job 具有写权限，用于为尚不存在的版本创建 Release，上传 `.xpi`、更新清单和校验文件。版本一致性及已有 Tag/Release 保护保留，已有 Release 不会被覆盖。发布 job 限时 5 分钟；真实 Zotero 验证仍由本地手动执行。
